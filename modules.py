@@ -27,7 +27,7 @@ def builder(pak):
         print("build.py not found.")
         sys.exit()
     try:
-        if build.isaPakBuild == True:
+        if build.isaPakBuild == "True":
             pass
         else:
             print("This isn't a valid build.py.")
@@ -37,7 +37,7 @@ def builder(pak):
 
     print("Building %s"%build.AppName)
     if build.SFileT == "url":
-        bmodules.download(build.SFileU,build.PakName)
+        bmodules.download(build.SUrlP,build.PakName)
     elif build.SFileT == "file":
         bmodules.copy(build.SFileP,build.PakName)
     else:

@@ -29,11 +29,7 @@ def copy(file, pname):
     os.chdir("autmp")
     os.mkdir(pname)
     os.chdir(pname)
-    try:
-        shutil.copy(file,os.curdir)
-    except:
-        print("Source not valid.")
-        sys.exit()
+    shutil.copy(file,os.curdir)
 
 def debbuild(pname):
     os.chdir("/tmp/autmp/%s"%pname)
