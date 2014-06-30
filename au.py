@@ -34,7 +34,7 @@ except:
 if arg1 == "help":
     print("""
 Au: A platform independent package management tool.
-Version: 0.1
+Version: 0.11
 2012 - 2014 Alp Erbil
 Valid parameters:
 build - Build new package providing build.py

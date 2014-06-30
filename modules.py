@@ -41,7 +41,7 @@ def builder(pak):
     elif build.SFileT == "file":
         bmodules.copy(build.SFileP,build.PakName)
     else:
-        print("The file type that stated in build.py not yet supported")
+        print('The file type that stated in build.py not yet supported.')
     if build.BType == "deb":
         bmodules.debbuild(build.PakName)
     else:
