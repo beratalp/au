@@ -40,6 +40,7 @@ Valid parameters:
 build - Build new package providing build.py
 help - Show this message
 ccache - Clears autmp directory
+brepo - Creates a repo.py database.
     """)
 
 elif arg1 == "build":

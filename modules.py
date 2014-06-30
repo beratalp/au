@@ -44,6 +44,8 @@ def builder(pak):
         print('The file type that stated in build.py not yet supported.')
     if build.BType == "deb":
         bmodules.debbuild(build.PakName)
+    if build.BType == "make":
+        bmodules.makebuild(build.PakName,build.PakV)
     else:
         print("The build type that stated in build.py not yet supported.")
         sys.exit()

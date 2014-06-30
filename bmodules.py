@@ -49,6 +49,22 @@ def debbuild(pname):
     os.chdir("copy")
     os.system("tar xf data.tar")
     os.remove("data.tar")
+def makebuild(pname,pver):
+    os.chdir("/tmp/autmp/%s"%pname)
+    MPakList = os.listdir(os.curdir)
+    MPak = MPakList[0]
+    os.system("tar xzf %s"%MPak)
+    os.chdir("%s-%s"%(pname,pver))
+    os.system("./configure")
+    os.system("make")
+    os.system("make install install_root=%s"%os.pardir)
+    os.system("rm -rf %s-%s"%(pname,pver))
+    os.chdir(os.pardir)
+    os.remove(MPak)
+
+
+
+
 def ccontrol(pname):
     os.chdir("/tmp/autmp/%s/copy"%pname)
 
