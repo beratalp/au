@@ -1,5 +1,5 @@
 # au - A platform independent package management tool
-# Copyright (C) 2012-2013 Berat Alp Erbil
+# Copyright (C) 2012-2014 Berat Alp Erbil
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by

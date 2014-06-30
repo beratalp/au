@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 # au - A platform independent package management tool
-# Copyright (C) 2012-2013 Berat Alp Erbil
+# Copyright (C) 2012-2014 Berat Alp Erbil
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -15,11 +15,14 @@
 
 
 import sys, os, getpass, modules
+import warnings
+
+warnings.filterwarnings("ignore")
 
 if getpass.getuser() == "root":
     pass
 else:
-    print("This program must run with root privileges")
+    print("This program must run with root privileges. If you're using 'su' for getting root privileges, use 'su -' instead of 'su'.")
     sys.exit()
 
 try:
@@ -32,6 +35,7 @@ if arg1 == "help":
     print("""
 Au: A platform independent package management tool.
 Version: 0.1
+2012 - 2014 Alp Erbil
 Valid parameters:
 build - Build new package providing build.py
 help - Show this message
